@@ -61,8 +61,10 @@
   .arrow-right{
     position: relative;
     top: 4px;
+    right: 0;
     padding-left: 14px;
     width: 35px;
+     transition: right 0.3s ease-in-out;
     @include breakpoint-desktop-small{
       width: 47px;
     }
@@ -73,11 +75,10 @@
       font-size: 20px;
       background-color: transparent;
       &:hover{
-        transition: all 0.2s ease-in-out;
         .arrow-right{
-            color: #BA5D01;
-            animation: btn-move 0.3s ease-in-out forwards;
-              z-index: -1;
+          right: -20px;
+          color: #BA5D01;
+          z-index: -1;
         }
       }
 
