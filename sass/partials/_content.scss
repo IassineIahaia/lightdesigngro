@@ -73,15 +73,11 @@
       font-size: 20px;
       background-color: transparent;
       &:hover{
+        transition: all 0.2s ease-in-out;
         .arrow-right{
-          g{
-            path, line{
-              @include breakpoint-desktop-small{
-                  stroke: #BA5D01;
-              }
-            }
-          }
-         
+            color: #BA5D01;
+            animation: btn-move 0.3s ease-in-out forwards;
+              z-index: -1;
         }
       }
 
