@@ -15,6 +15,13 @@
     z-index: 6;
     background: #fbf8ee;
     transform: rotate(-32deg);
+    @include breakpoint-desktop-small{
+      bottom: -135px;
+      right: 43px;
+      width: 520px;
+      height: 194px;
+      transform: rotate(-27deg);
+    }
   }
   .wrapper{
     display: flex;
