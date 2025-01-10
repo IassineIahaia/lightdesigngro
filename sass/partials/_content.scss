@@ -6,15 +6,15 @@
     height: 97dvh;
   }
   &:before{
-    content: '';
+    content: "";
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: -41px;
+    right: 37px;
     width: 136px;
-    height: 60px;
+    height: 70px;
     z-index: 6;
-    background: $color-lightcream;
-    transform: rotate(-31deg);
+    background: #fbf8ee;
+    transform: rotate(-32deg);
   }
   .wrapper{
     display: flex;
