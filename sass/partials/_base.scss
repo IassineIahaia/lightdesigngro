@@ -58,31 +58,12 @@ body {
   margin: 0 auto;
 
   @include breakpoint-tablet {
-    width: calc(100% - 10rem);
-  }
-
-  @include breakpoint-desktop-small {
-    width: calc(100% - 16rem);
-  }
-}
-.wrapper-slider{
-  width: calc(100% - 0rem);
-  max-width: rem(1200px);
-  margin: 0 auto;
-
-  @include breakpoint-tablet {
-    width: calc(100% - 5rem);
-  }
-
-  @include breakpoint-desktop-small {
     width: calc(100% - 8rem);
   }
+
+
 }
-.wrapper-small {
-  @include breakpoint-desktop-small {
-   padding-left: 100px;
-  }
-}
+
 
 .with-margin {
   margin: 2rem 0;
