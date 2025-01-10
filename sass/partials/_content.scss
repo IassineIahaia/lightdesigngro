@@ -5,12 +5,24 @@
   @include breakpoint-desktop-small{
     height: 97dvh;
   }
+  &:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 136px;
+    height: 60px;
+    z-index: 6;
+    background: $color-lightcream;
+    transform: rotate(-31deg);
+  }
   .wrapper{
     display: flex;
     align-items: end;
     height: 100%;
     z-index: 4;
   }
+
 }
 .hero-image{
   position: absolute;
