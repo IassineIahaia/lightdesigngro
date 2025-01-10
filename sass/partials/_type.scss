@@ -1,0 +1,119 @@
+h1, h2, h3, h4{
+    font-family: $font-family-default;
+    line-height: 1;
+    color: $color-black;
+}
+
+h2, h3, h4{
+    margin-bottom: rem(10px);
+}
+
+h1{
+    font-size: rem(36px);
+    margin-bottom: rem(25px);
+    line-height: 1;
+    color: $color-white;
+    font-weight: 300;
+    @include breakpoint-desktop-small{
+        font-size: rem(60px);
+        margin-bottom: rem(36px);
+    }
+}
+
+h2{
+    font-size: rem(32px);
+}
+
+h3{
+    font-size: rem(24px); 
+    margin-bottom: rem(15px);
+}
+
+h4{
+    font-size: rem(22px);
+}
+
+b, strong {
+    font-weight: 700;
+}
+
+em {
+    font-style: italic;
+}
+
+
+.text-container {
+    max-width: rem(957px);
+    @include breakpoint-tablet{
+        max-width: rem(588px);
+    }
+
+    p, ul, ol,
+    blockquote,
+    .embed-container,
+    .wp-caption {
+        line-height: rem(24px);
+        margin-bottom: rem(50px);
+        max-width: 100%;
+        &:last-child{
+            @include breakpoint-desktop-small{
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    ul, ol {
+        position: relative;
+        list-style: none;
+
+        li:not(.gfield) {
+            padding-left: 1.25em;
+
+            &::before {
+                position: absolute;
+                text-indent: -1.25em;
+            }
+        }
+    }
+
+    ul {
+        li:not(.gfield) {
+            &::before {
+                content: '•';
+            }
+        }
+    }
+
+    ol {
+        counter-reset: ol-counter;
+
+        li {
+            counter-increment: ol-counter;
+
+            &::before {
+                content: counter(ol-counter) '.';
+            }
+        }
+    }
+
+    a{
+        &:not(.btn){
+            &:hover{
+                color: $color-black;
+            }    
+        }  
+    }
+    p{
+        margin: 0 rem(0px) rem(50px) 0;
+        @include breakpoint-tablet{
+            margin-bottom: 53px;
+        }
+    }
+
+    blockquote {
+        padding-left: 1em;
+        font-size: 1.4em;
+        line-height: 1.2;
+        border-left: .1rem solid currentColor;
+    }
+}
