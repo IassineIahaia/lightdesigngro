@@ -159,7 +159,7 @@ em {
         @include breakpoint-desktop-small{
             height: 558px;  
             @include grid-column-start(4);
-            @include grid-column-span(15);
+            @include grid-column-span(16);
         }
         &::before{
             content: '';
