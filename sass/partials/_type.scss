@@ -128,38 +128,26 @@ em {
         border-left: .1rem solid currentColor;
     }
 }
-.overview{
-    
-}
+
 .body-text{
-    @include grid-layout(6, 10px);
+    .wrapper{
     padding: 60px 0;
-    @include breakpoint-tablet{
-        padding: 80px 0;
-        @include grid-layout(12, 10px);
-    }
     @include breakpoint-desktop-small{
         padding: 150px 0;
         @include grid-layout(20, 10px);
     }
+    }
+
     h2{
-        @include grid-column-start(2);
-        @include grid-column-span(4);
-        @include breakpoint-tablet{
-            @include grid-column-start(3);
-            @include grid-column-span(10)
-        }
         @include breakpoint-desktop-small{
-            @include grid-column-start(3);
-            @include grid-column-span(10);
+            @include grid-column-start(1);
+            @include grid-column-span(13);
         }
     }
     p{
-        @include grid-column-start(2);
-        @include grid-column-span(4);
         @include breakpoint-tablet{
-            @include grid-column-start(3);
-            @include grid-column-span(9);
+            @include grid-column-start(1);
+            @include grid-column-span(12);
         }
 
         margin-bottom: 20px;
@@ -168,23 +156,16 @@ em {
         position: relative;
         height: 358px;  
         margin: 40px 0 60px 0;
-        @include grid-column-start(2);
-        @include grid-column-span(4);
-        @include breakpoint-tablet{
-            @include grid-column-start(3);
-            @include grid-column-span(9);
-        }
         @include breakpoint-desktop-small{
             height: 558px;  
-            @include grid-column-start(6);
-            @include grid-column-span(12);
+            @include grid-column-start(4);
+            @include grid-column-span(15);
         }
         &::before{
             content: '';
             position: absolute;
             top: 0;
             left: -10px;
-            width: 400px;
             height: 72.52px;
             background:url('images/shape-bottom.svg') no-repeat;
             z-index: 3;
@@ -195,7 +176,6 @@ em {
             position: absolute;
             bottom: 0;
             right: 0px;
-            width: 400px;
             height: 72.52px;
             background:  url('images/shape-bottom.svg') no-repeat;
             z-index: 5;
@@ -209,11 +189,9 @@ em {
         color: $color-black;
         max-width: 168px;
         padding: 14px 20px 12px 30px;
-        @include grid-column-start(2);
-        @include grid-column-span(2);
         @include breakpoint-tablet{
-            @include grid-column-start(3);
-            @include grid-column-span(3); 
+            @include grid-column-start(1);
+            @include grid-column-span(4); 
         }
     }
 }
