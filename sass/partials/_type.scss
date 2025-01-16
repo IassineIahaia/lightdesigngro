@@ -22,6 +22,13 @@ h1{
 
 h2{
     font-size: rem(32px);
+    line-height: 1;
+    font-weight: 300;
+    margin-bottom: rem(25px);
+    @include breakpoint-desktop-small{
+        font-size: rem(60px);
+        margin-bottom: rem(36px);
+    }
     
 }
 
@@ -118,13 +125,38 @@ em {
         border-left: .1rem solid currentColor;
     }
 }
-
+.overview{
+    
+}
 .body-text{
 
     @include breakpoint-desktop-small{
+        padding: 150px 0;
         @include grid-layout(20, 10px);
     }
     h2{
-        @include grid-column-start();
+        @include grid-column-start(3);
+        @include grid-column-span(10);
+    }
+    p{
+        @include grid-column-start(3);
+        @include grid-column-span(9);
+        margin-bottom: 20px;
+    }
+    .body-text-image{
+        height: 558px;
+        margin: 40px 0 60px 0;
+        @include grid-column-start(6);
+        @include grid-column-span(12);
+        
+    }
+    .btn-yellow{
+        font-family:$font-family-default;
+        background-color: #CDB568;
+        font-weight: 200;
+        color: $color-black;
+        padding: 14px 20px 12px 19px;
+        @include grid-column-start(3);
+        @include grid-column-span(3); 
     }
 }
