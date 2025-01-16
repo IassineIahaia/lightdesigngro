@@ -22,6 +22,7 @@ h1{
 
 h2{
     font-size: rem(32px);
+    
 }
 
 h3{
@@ -115,5 +116,15 @@ em {
         font-size: 1.4em;
         line-height: 1.2;
         border-left: .1rem solid currentColor;
+    }
+}
+
+.body-text{
+
+    @include breakpoint-desktop-small{
+        @include grid-layout(20, 10px);
+    }
+    h2{
+        @include grid-column-start();
     }
 }

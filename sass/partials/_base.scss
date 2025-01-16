@@ -60,8 +60,12 @@ body {
   @include breakpoint-tablet {
     width: calc(100% - 8rem);
   }
-
-
+}
+.wrapper-gallery{
+  @include breakpoint-tablet {
+    max-width: 1233px;
+    width: calc(100% - 8rem);
+  }
 }
 
 
@@ -93,18 +97,4 @@ body {
   }
 }
 
-.last-products ~ .overview {
-  @include breakpoint-desktop-small {
-    margin-top: 148px;
-  }
-}
-
-// @keyframes btn-move{
-//   from {
-//     transform: translateX(0); 
-// }
-// to {
-//     transform: translateX(10px); 
-// }
-// }
 
