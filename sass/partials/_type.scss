@@ -23,7 +23,7 @@ h1{
 h2{
     font-size: rem(32px);
     line-height: 1;
-    font-weight: 300;
+    font-weight: 400;
     margin-bottom: rem(25px);
     @include breakpoint-tablet{
         font-size: rem(40px);
@@ -51,13 +51,15 @@ b, strong {
 em {
     font-style: italic;
 }
-
+p{
+    margin-bottom: 20px;
+}
 
 .text-container {
     padding: 60px 0;
     @include breakpoint-desktop-small{
         padding: 150px 0;
-        @include grid-layout(20, 10px);
+        @include grid-layout(16, 10px);
     }
     h1, h2, h3, h4, h5, h6{
         @include breakpoint-desktop-small{
@@ -71,15 +73,18 @@ em {
     .embed-container,
     .wp-caption {
         line-height: rem(24px);
-        margin-bottom: rem(50px);
         max-width: 100%;
+        margin: 0 rem(5px) rem(20px) 0;
+        @include breakpoint-desktop-small{
+            @include grid-column-start(1);
+            @include grid-column-span(9);
+        }
         &:last-child{
             @include breakpoint-desktop-small{
                 margin-bottom: 0;
             }
         }
     }
-
     ul, ol {
         position: relative;
         list-style: none;
@@ -121,25 +126,15 @@ em {
             }    
         }  
     }
-    p{
-        margin: 0 rem(0px) rem(50px) 0;
-        @include breakpoint-desktop-small{
-            @include grid-column-start(1);
-            @include grid-column-span(12);
-        }
-
-        margin-bottom: 20px;
-      
-    }
     p:has(img) {
+        max-width: 100%;
         position: relative;
-        background-color: hotpink;
         height: 350px;
         margin: 40px 0 60px 0;
         @include breakpoint-desktop-small{
             height: 558px;  
             @include grid-column-start(4);
-            @include grid-column-span(16);
+            @include grid-column-span(13);
         }
         >img{
             width: 100%;
@@ -152,11 +147,11 @@ em {
             top: 0;
             width: 167.18px;
             left: 10px;
-            height: 65px;
+            height: 68px;
             background: url('images/shape-bottom.svg') no-repeat 0 0;
             z-index: 3;
             transform: scale(-1);
-            aspect-ratio: 2 / 1;
+           
         }
         &::after{
             content: '';
@@ -164,7 +159,7 @@ em {
             bottom: 0;
             right: 10px;
             width: 167.18px;
-            height: 65px;
+            height: 68px;
             background: url('images/shape-bottom.svg') no-repeat 0 0;
             z-index: 5;
         }
@@ -176,17 +171,10 @@ em {
         line-height: 1.2;
         border-left: .1rem solid currentColor;
     }
-
-    .btn-yellow{
-        font-family:$font-family-default;
-        background-color: #CDB568;
-        font-weight: 200;
-        color: $color-black;
-        max-width: 168px;
-        padding: 14px 20px 12px 30px;
+    .body-text-btn{
         @include breakpoint-tablet{
             @include grid-column-start(1);
-            @include grid-column-span(4); 
+            @include grid-column-span(3); 
         }
     }
 }

@@ -1,13 +1,12 @@
 %control-properties {
   transition: padding 0.3s ease-in-out;
   position: relative;
-  font-family: $font-family-title;
+  font-family:$font-family-default;
   font-size: rem(16px);
-  font-weight: bold;
   display: inline-block;
   background-color: #BA5D01;
   color: $color-white;
-  padding: rem(6px) rem(20px) rem(13px) rem(20px);
+  padding: rem(12px) rem(20px) rem(12px) rem(20px);
   text-decoration: none;
   line-height: 1;
   overflow: hidden;
@@ -27,12 +26,21 @@
   color: $color-white;
 }
 .btn {
- 
   transition: all 0.2s ease-in-out;
   @extend %control-properties;
 
 }
 
+.btn-brown{
+  background-color: #CDB568;
+  color: $color-black;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid #CDB568;
+  padding: rem(11px) rem(19px) rem(11px) rem(19px);
+  &:hover{
+     background-color: transparent;
+  }
+}
 
 form {
   position: relative;

@@ -54,7 +54,7 @@ body {
 .wrapper {
   position: relative;
   width: calc(100% - 4rem);
-  max-width: rem(1090px);
+  max-width: rem(1095px);
   margin: 0 auto;
 
   @include breakpoint-tablet {
@@ -67,7 +67,9 @@ body {
     width: calc(100% - 8rem);
   }
 }
-
+.wrapper-gallery{
+  width: calc(100% - 88px);
+}
 
 .with-margin {
   margin: 2rem 0;
