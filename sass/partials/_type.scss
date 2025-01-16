@@ -54,9 +54,16 @@ em {
 
 
 .text-container {
-    max-width: rem(957px);
-    @include breakpoint-tablet{
-        max-width: rem(588px);
+    padding: 60px 0;
+    @include breakpoint-desktop-small{
+        padding: 150px 0;
+        @include grid-layout(20, 10px);
+    }
+    h1, h2, h3, h4, h5, h6{
+        @include breakpoint-desktop-small{
+            @include grid-column-start(1);
+            @include grid-column-span(13);
+        }
     }
 
     p, ul, ol,
@@ -116,8 +123,50 @@ em {
     }
     p{
         margin: 0 rem(0px) rem(50px) 0;
-        @include breakpoint-tablet{
-            margin-bottom: 53px;
+        @include breakpoint-desktop-small{
+            @include grid-column-start(1);
+            @include grid-column-span(12);
+        }
+
+        margin-bottom: 20px;
+      
+    }
+    p:has(img) {
+        position: relative;
+        background-color: hotpink;
+        height: 350px;
+        margin: 40px 0 60px 0;
+        @include breakpoint-desktop-small{
+            height: 558px;  
+            @include grid-column-start(4);
+            @include grid-column-span(16);
+        }
+        >img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 167.18px;
+            left: 10px;
+            height: 65px;
+            background: url('images/shape-bottom.svg') no-repeat 0 0;
+            z-index: 3;
+            transform: scale(-1);
+            aspect-ratio: 2 / 1;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 10px;
+            width: 167.18px;
+            height: 65px;
+            background: url('images/shape-bottom.svg') no-repeat 0 0;
+            z-index: 5;
         }
     }
 
@@ -127,61 +176,7 @@ em {
         line-height: 1.2;
         border-left: .1rem solid currentColor;
     }
-}
 
-.body-text{
-    .wrapper{
-    padding: 60px 0;
-    @include breakpoint-desktop-small{
-        padding: 150px 0;
-        @include grid-layout(20, 10px);
-    }
-    }
-
-    h2{
-        @include breakpoint-desktop-small{
-            @include grid-column-start(1);
-            @include grid-column-span(13);
-        }
-    }
-    p{
-        @include breakpoint-tablet{
-            @include grid-column-start(1);
-            @include grid-column-span(12);
-        }
-
-        margin-bottom: 20px;
-    }
-    .body-text-image{
-        position: relative;
-        height: 358px;  
-        margin: 40px 0 60px 0;
-        @include breakpoint-desktop-small{
-            height: 558px;  
-            @include grid-column-start(4);
-            @include grid-column-span(16);
-        }
-        &::before{
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -10px;
-            height: 72.52px;
-            background:url('images/shape-bottom.svg') no-repeat;
-            z-index: 3;
-            transform: scale(-1);
-        }
-        &::after{
-            content: '';
-            position: absolute;
-            bottom: 0;
-            right: 0px;
-            height: 72.52px;
-            background:  url('images/shape-bottom.svg') no-repeat;
-            z-index: 5;
-        }
-
-    }
     .btn-yellow{
         font-family:$font-family-default;
         background-color: #CDB568;
