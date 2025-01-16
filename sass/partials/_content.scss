@@ -111,6 +111,7 @@
 
 .galley-image {
   height: 440px;
+  margin-left: 1px;
   margin-bottom: 40px;
   @include grid-column-start(2);
   @include grid-column-span(10);
@@ -123,11 +124,12 @@
 .gallery-text-image{
   position: relative;
   margin-bottom: 200px;
+  margin-left: 5px;
   @include grid-column-start(2);
   @include grid-column-span(8);
   @include breakpoint-desktop-small{
     @include grid-column-start(15);
-    @include grid-column-span(5 );
+    @include grid-column-span(5);
     
   }
 }
