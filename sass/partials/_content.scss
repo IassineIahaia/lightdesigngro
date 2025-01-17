@@ -293,6 +293,13 @@
         margin-bottom: 25px;
       }
     }
+    .btn-product{
+      @include breakpoint-desktop-small{
+        margin-top: -50px;
+        @include grid-column-start(15);
+        @include grid-column-span(5);
+      }
+    }
   }
 }
 
@@ -354,3 +361,4 @@
     background-color: transparent;
   }
 }
+
