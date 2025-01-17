@@ -147,15 +147,15 @@
 
 // overview
 
-.overview{
+.overview-project{
   overflow: hidden;
   position: relative;
   height: 589px;
-  margin: 10px 10px 150px 10px;
+  margin: 10px 0px 150px 10px;
   @include breakpoint-desktop-small{
+    margin: 10px 10px 150px 10px;
     min-height: 820px;
   }
-
   .wrapper{
     display: flex;
     align-items: end;
@@ -188,7 +188,7 @@
     }
   }
 }
-.overview-image{
+.overview-project-image{
   position: absolute;
   height: 100%;
   width: 100%;
@@ -210,7 +210,7 @@
  
 }
 
-.overview-text{
+.overview-project-text{
   margin-bottom: 38px;
   @include breakpoint-desktop-small{
     margin-bottom: 76px;
@@ -227,4 +227,86 @@
     }
   }
 
+}
+
+// text-image
+
+.text-image{
+  margin-bottom: 130px;
+  .wrapper{
+    @include grid-layout(10, 10px);
+    @include breakpoint-desktop-small{
+      @include grid-layout(18, 10px);
+    }
+  }
+}
+
+.text-image-text{
+  @include grid-column-start(1);
+  @include grid-column-span(10);
+  @include breakpoint-desktop-small{
+    @include grid-column-start(3);
+    @include grid-column-span(8);
+  }
+
+  h1{
+    color: $color-black;
+    font-size: 46px;
+    margin-bottom: 60px;
+    @include breakpoint-desktop-small{
+      font-size: 70px;
+    }
+  }
+}
+.text-image-image{
+  @include grid-column-start(2);
+  @include grid-column-span(10);
+  height: 208px;
+  width: 310px;
+  @include breakpoint-desktop-small{
+    @include grid-column-start(11);
+    @include grid-column-span(6);
+    margin: 90px 0 0 33px;
+  }
+}
+
+.overview-products{
+  background-color: $color-black;
+  margin-bottom: 100px;
+  @include breakpoint-desktop-small{
+    padding: 150px 0;
+  }
+  .wrapper{
+    @include grid-layout(10, 10px);
+    @include breakpoint-desktop-small{
+      @include grid-layout(16, 10px);
+    }
+  }
+}
+
+
+.overview-produc-item{
+  min-height: 482px;
+  position: relative;
+  @include grid-column-start(1);
+  @include grid-column-span(5);
+}
+.overview-product-item-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.overview-product-item-text{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  .btn{
+    margin: 30px;
+    background-color: transparent;
+  }
 }
