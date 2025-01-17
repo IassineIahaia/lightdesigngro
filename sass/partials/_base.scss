@@ -67,6 +67,12 @@ body {
     width: calc(100% - 8rem);
   }
 }
+.wrapper-product{
+  @include breakpoint-tablet {
+    max-width: 1237px;
+    width: calc(100% - 5rem);
+  }
+}
 .wrapper-gallery{
   width: calc(100% - 88px);
 }
