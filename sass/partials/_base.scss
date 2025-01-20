@@ -53,29 +53,14 @@ body {
 
 .wrapper {
   position: relative;
-  width: calc(100% - 5.375rem);
-  max-width: rem(1095px);
+  width: calc(100% - 20px);
+  max-width: rem(1390px);
   margin: 0 auto;
 
-  @include breakpoint-tablet {
-    width: calc(100% - 8rem);
-  }
+
 }
-.wrapper-gallery{
-  @include breakpoint-tablet {
-    max-width: 1233px;
-    width: calc(100% - 8rem);
-  }
-}
-.wrapper-product{
-  @include breakpoint-tablet {
-    max-width: 1237px;
-    width: calc(100% - 5rem);
-  }
-}
-.wrapper-gallery{
-  width: calc(100% - 88px);
-}
+
+
 
 .with-margin {
   margin: 2rem 0;

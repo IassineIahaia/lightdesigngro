@@ -358,6 +358,9 @@
     height: auto;
     transform: scale(-1);
     max-width: 414px;
+    path{
+      fill: #000000;
+    }
     @include breakpoint-desktop-small{
       left: 1vw;
     }
@@ -370,22 +373,11 @@
     width: 170px;
     height: auto;
     max-width: 414px;
+    path{
+      fill: #000000;
+    }
     @include breakpoint-desktop-small{
       right: 1vw;
-    }
-  }
-  &::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 4;
-    background: rgb(255,255,255);
-    background: linear-gradient(195deg, rgba(255,255,255,0.00043767507002800965) 50%, rgba(0,0,0,1) 100%);
-    @include breakpoint-desktop-small{
-      background: linear-gradient(211deg, rgba(255,255,255,0.00043767507002800965) 65%, rgba(0,0,0,1) 100%);
     }
   }
 }
@@ -421,71 +413,153 @@
 // cta
 
 .cta{
-  margin: 92px 0px;
-
+  padding: 150px 0;
   .wrapper{
-    @include grid-layout(10, 10px);
+    @include grid-layout(12, 10px, 50px);
     @include breakpoint-desktop-small{
-      @include grid-layout(18, 10px);
-      align-items: end;
+      @include grid-layout(20, 10px)
     }
-
   }
 }
-.cta-link{
-  margin-bottom: 40px;
-  @include grid-column-start(1);
-  @include grid-column-span(11);
+.cta-content{
+  @include grid-column-start(2);
+  @include grid-column-span(8);
   @include breakpoint-desktop-small{
-    margin-bottom: 200px;
-    @include grid-column-start(1);
-    @include grid-column-span(5);
+    margin-top: 110px;
+    @include grid-column-start(4);
+    @include grid-column-span(4);
+  }
+  h2{
+    font-size: 60px;
+    @include breakpoint-desktop-small{
+      font-size: 59px;
+    }
   }
   a{
     display: block;
     text-decoration: none;
     color: $color-black;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
     &:hover{
       color: #BA5D01;
     }
   }
-}
+  h5{
+    font-size: 16px;
+  }
 
-.cta-image-big {
-  height: 440px;
-  margin-left: 1px;
-  margin-bottom: 40px;
+}
+.cta-image-big{
+  overflow: hidden;
+  height: 350px;
   @include grid-column-start(2);
   @include grid-column-span(10);
   @include breakpoint-desktop-small{
-    height: 732px;
-    @include grid-column-start(6);
-    @include grid-column-span(8);
-   
-  }
-}
-.cta-image-smalls{
-  position: relative;
-  margin-left: 5px;
-  @include grid-column-start(2);
-  @include grid-column-span(8);
-  @include breakpoint-desktop-small{
-    margin-bottom: 200px;
-    @include grid-column-start(15);
+    height: 526px;
+    @include grid-column-start(9);
     @include grid-column-span(5);
-    
+  }
+  .shape-top{
+    top: -1px;
+    position: absolute;
+    left: 25px;
+    z-index: 8;
+    width: 100px;
+    height: auto;
+    transform: scale(-1);
+    @include breakpoint-desktop-small{
+      left: 1vw;
+      width: 170px;
+    }
+  }
+  .shape-bottom{
+    bottom: -3px;
+    position: absolute;
+    right: 25px;
+    z-index: 8;
+    width: 100px;
+    height: auto;
+    @include breakpoint-desktop-small{
+      right: 1vw;
+      width: 170px;
+    }
   }
 }
-.ta-text-image-one{
-  
-}
-.cta-text-image-image{
+.cta-image-medium-small{
   display: none;
   @include breakpoint-desktop-small{
-    position: absolute;
     display: block;
-    margin-top: 60px;
-    height: 193.93px;
+    margin-top: 110px;
+    @include grid-layout(4,  10px, 20px);
+    @include grid-column-start(14);
+    @include grid-column-span(4);
+
+  }
+  
+}
+.cta-image-small{
+  position: relative;
+  overflow: hidden;
+  @include breakpoint-desktop-small{
+    height: 288px;
+    @include grid-column-start(1);
+    @include grid-column-span(3);
+  }
+
+  .shape-top{
+    top: -1px;
+    position: absolute;
+    left: 25px;
+    z-index: 8;
+    width: 90px;
+    height: auto;
+    transform: scale(-1);
+    @include breakpoint-desktop-small{
+      left: 1vw;
+    }
+  }
+  .shape-bottom{
+    bottom: -3px;
+    position: absolute;
+    right: 25px;
+    z-index: 8;
+    width: 90px;
+    height: auto;
+    @include breakpoint-desktop-small{
+      right: 1vw;
+    }
+  }
+}
+.cta-image-medium{
+  position: relative;
+  overflow: hidden;
+  @include breakpoint-desktop-small{
+    height: 208px;
+    @include grid-column-start(1);
+    @include grid-column-span(4);
+  }
+  .shape-top{
+    top: -1px;
+    position: absolute;
+    left: 25px;
+    z-index: 8;
+    width: 90px;
+    height: auto;
+    transform: scale(-1);
+    @include breakpoint-desktop-small{
+      left: 1vw;
+    }
+  }
+  .shape-bottom{
+    bottom: -3px;
+    position: absolute;
+    right: 25px;
+    z-index: 8;
+    width: 90px;
+    height: auto;
+    max-width: 414px;
+    @include breakpoint-desktop-small{
+      right: 1vw;
+    }
   }
 }
