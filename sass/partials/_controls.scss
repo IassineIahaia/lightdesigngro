@@ -1,7 +1,7 @@
 %control-properties {
   transition: padding 0.3s ease-in-out;
   position: relative;
-  font-family:$font-family-default;
+  font-family: $font-family-title;
   font-size: rem(16px);
   display: inline-block;
   background-color: #BA5D01;
@@ -32,6 +32,7 @@
 }
 
 .btn-brown{
+  font-family:$font-family-default;
   background-color: #CDB568;
   color: $color-black;
   transition: all 0.2s ease-in-out;
