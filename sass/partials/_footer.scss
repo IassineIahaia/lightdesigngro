@@ -40,7 +40,7 @@ footer{
         @include grid-column-start(2);
         @include grid-column-span(11);
         @include breakpoint-desktop-small{
-            font-size: 145px;
+            font-size: 150px;
         }
     }
     h3, p, a{

@@ -139,11 +139,12 @@
 .gallery-text-image-image{
   display: none;
   @include breakpoint-desktop-small{
-    position: absolute;
+    position: relative;
     display: block;
     margin-top: 60px;
     height: 193.93px;
   }
+
 }
 
 // overview
@@ -260,6 +261,8 @@
   }
 }
 .text-image-image{
+  position: relative;
+  overflow: hidden;
   @include grid-column-start(2);
   @include grid-column-span(10);
   height: 208px;
@@ -269,11 +272,37 @@
     @include grid-column-span(6);
     margin: 90px 0 0 33px;
   }
+  .shape-top{
+    top: -1px;
+    position: absolute;
+    left: 25px;
+    z-index: 8;
+    width: 90px;
+    height: auto;
+    transform: scale(-1);
+    max-width: 414px;
+    @include breakpoint-desktop-small{
+      left: 1vw;
+    }
+  }
+  .shape-bottom{
+    bottom: -3px;
+    position: absolute;
+    right: 25px;
+    z-index: 8;
+    width: 90px;
+    height: auto;
+    max-width: 414px;
+    @include breakpoint-desktop-small{
+      right: 1vw;
+    }
+  }
 }
 
 // overview products
 
 .overview-products{
+  position: relative;
   background-color: $color-black;
   padding: 100px 0;
   @include breakpoint-desktop-small{
@@ -306,6 +335,31 @@
           color: #CDB568;
         }
       }
+    }
+  }
+  .shape-top{
+    top: -1px;
+    position: absolute;
+    left: 10px;
+    z-index: 8;
+    width: 118px;
+    height: auto;
+    transform: scale(-1);
+    @include breakpoint-desktop-small{
+      width: 230px;
+      left: 130px;
+    }
+  }
+  .shape-bottom{
+    bottom: -3px;
+    position: absolute;
+    right: 10px;
+    z-index: 8;
+    width: 118px;
+    height: auto;
+    @include breakpoint-desktop-small{
+      width: 230px;
+      right: 130px;
     }
   }
 }
