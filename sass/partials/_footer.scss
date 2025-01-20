@@ -1,3 +1,130 @@
 footer{
+    position: relative;
     background-color: $color-black;
+    padding: 150px 0;
+    .shape-top{
+        top: -1px;
+        position: absolute;
+        left: 10px;
+        z-index: 8;
+        width: 118px;
+        height: auto;
+        transform: scale(-1);
+        @include breakpoint-desktop-small{
+          width: 230px;
+          left: 130px;
+        }
+      }
+      .shape-bottom{
+        bottom: -3px;
+        position: absolute;
+        right: 10px;
+        z-index: 8;
+        width: 118px;
+        height: auto;
+        @include breakpoint-desktop-small{
+          width: 230px;
+          right: 130px;
+        }
+      }
+    .wrapper{
+        @include grid-layout(12, 10px);
+        overflow: hidden;
+        @include breakpoint-desktop-small{
+            @include grid-layout(20, 10px, 60px );
+        }
+    }
+    h1{
+        font-size: 50px;
+        text-wrap: nowrap;
+        @include grid-column-start(2);
+        @include grid-column-span(11);
+        @include breakpoint-desktop-small{
+            font-size: 145px;
+        }
+    }
+    h3, p, a{
+        color: $color-white;
+        text-decoration: none
+    }
+    h3{
+        font-size: 40px;
+        font-weight: 300;
+    }
+    p{
+        font-size: 20px;
+    }
+    a{
+        font-size: 20px;
+    }
+}
+.footer-adress{
+    margin-bottom: 50px;
+}
+.footer-content{
+    @include grid-column-start(2);
+    @include grid-column-span(11);
+    @include breakpoint-desktop-small{
+        @include grid-column-start(1);
+        @include grid-column-span(20);
+        @include grid-layout(20, 10px);
+    }
+}
+.footer-image{
+    position: relative;
+    display: none;
+    height: 208px;
+    @include breakpoint-desktop-small{
+        display: block;
+        @include grid-column-start(4);
+        @include grid-column-span(4);
+       
+    }
+    .shape-top{
+        top: -1px;
+        position: absolute;
+        left: 25px;
+        z-index: 8;
+        width: 90px;
+        height: auto;
+        transform: scale(-1);
+        max-width: 414px;
+        path{
+          fill: #000000;
+        }
+        @include breakpoint-desktop-small{
+          left: 1vw;
+        }
+      }
+      .shape-bottom{
+        bottom: -3px;
+        position: absolute;
+        right: 25px;
+        z-index: 8;
+        width: 90px;
+        height: auto;
+        max-width: 414px;
+        path{
+          fill: #000000;
+        }
+        @include breakpoint-desktop-small{
+          right: 1vw;
+        }
+      }
+}
+
+.footer-adress{
+
+    @include breakpoint-desktop-small{
+        @include grid-column-start(10);
+        @include grid-column-span(4);
+       
+    }
+}
+
+.footer-social{
+    @include breakpoint-desktop-small{
+        @include grid-column-start(16);
+        @include grid-column-span(3);
+    }
 }
