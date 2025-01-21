@@ -92,10 +92,7 @@
 
 .gallery{
   margin: 92px 0px;
-
   .wrapper{
-    @include grid-layout(10, 10px);
-
     h2{
       font-size: 46px;
       margin-bottom: 40px;
@@ -236,10 +233,6 @@
 .text-image{
   margin-bottom: 130px;
   .wrapper{
-    @include grid-layout(10, 10px);
-    @include breakpoint-desktop-small{
-      @include grid-layout(18, 10px);
-    }
   }
 }
 
@@ -309,10 +302,6 @@
     padding: 150px 0;
   }
   .wrapper{
-    @include grid-layout(2, 10px);
-    @include breakpoint-desktop-small{
-      @include grid-layout(18, 10px);
-    }
     h1{
       @include breakpoint-desktop-small{
         @include grid-column-start(8);
@@ -468,10 +457,6 @@
 .cta{
   padding: 150px 0;
   .wrapper{
-    @include grid-layout(12, 10px, 50px);
-    @include breakpoint-desktop-small{
-      @include grid-layout(20, 10px)
-    }
   }
 }
 .cta-content{
