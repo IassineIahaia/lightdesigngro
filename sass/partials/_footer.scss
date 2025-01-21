@@ -28,6 +28,7 @@ footer{
         }
       }
     .wrapper{
+      
         @include grid-layout(12, 10px);
         overflow: hidden;
         @include breakpoint-desktop-small{
@@ -35,11 +36,14 @@ footer{
         }
     }
     h1{
+      position: relative;
+      right: -25px;
         font-size: 50px;
         text-wrap: nowrap;
-        @include grid-column-start(2);
-        @include grid-column-span(11);
+        @include grid-column-start(1);
+        @include grid-column-span(12);
         @include breakpoint-desktop-small{
+          right: -101px;
             font-size: 150px;
         }
     }

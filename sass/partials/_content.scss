@@ -6,12 +6,13 @@
   @include breakpoint-desktop-small{
     height: calc(100vh - 20px);
   }
-
   .wrapper{
-    display: flex;
-    align-items: end;
+    z-index: 6;
     height: 100%;
-    z-index: 4;
+    align-items: end;
+    @include breakpoint-tablet{
+      width: 100%;
+    }
   }
   .shape-bottom{
     bottom: -1px;
@@ -50,10 +51,12 @@
 }
 
 .hero-text{
-  max-width: 33ch;
+  @include grid-column-start(2);
+  @include grid-column-span(10);
   margin-bottom: 38px;
   @include breakpoint-desktop-small{
-    max-width: 56ch;
+    @include grid-column-start(3);
+    @include grid-column-span(8);
     margin-bottom: 76px;
   }
   .arrow-right{
@@ -92,10 +95,7 @@
 
   .wrapper{
     @include grid-layout(10, 10px);
-    @include breakpoint-desktop-small{
-      @include grid-layout(18, 10px);
-      align-items: end;
-    }
+
     h2{
       font-size: 46px;
       margin-bottom: 40px;
@@ -314,7 +314,6 @@
       @include grid-layout(18, 10px);
     }
     h1{
-  
       @include breakpoint-desktop-small{
         @include grid-column-start(8);
         @include grid-column-span(6);
