@@ -93,6 +93,7 @@
 .gallery{
   margin: 92px 0px;
   .wrapper{
+    align-items: end;
     h2{
       font-size: 46px;
       margin-bottom: 40px;
@@ -101,7 +102,7 @@
       @include breakpoint-desktop-small{
         font-size: 60px;
         margin-bottom: 200px;
-        @include grid-column-start(1);
+        @include grid-column-start(2);
         @include grid-column-span(5);
       }
     }
@@ -116,19 +117,19 @@
   @include grid-column-span(10);
   @include breakpoint-desktop-small{
     height: 732px;
-    @include grid-column-start(6);
+    @include grid-column-start(7);
     @include grid-column-span(8);
    
   }
 }
 .gallery-text-image{
   position: relative;
+  bottom: -40px;
   margin-left: 5px;
   @include grid-column-start(2);
   @include grid-column-span(8);
   @include breakpoint-desktop-small{
-    margin-bottom: 200px;
-    @include grid-column-start(15);
+    @include grid-column-start(16);
     @include grid-column-span(5);
     
   }
