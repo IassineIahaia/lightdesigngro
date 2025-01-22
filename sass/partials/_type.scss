@@ -57,17 +57,21 @@ p{
 
 .text-container {
     padding: 60px 0;
-    @include breakpoint-desktop-small{
-        padding: 150px 0;
-        @include grid-layout(16, 10px);
+    @include grid-column-start(1);
+    @include grid-layout(12, 10px, 50px);
+    @include grid-column-span(12);
+    @include breakpoint-tablet{
+        @include grid-column-span(20);
+        @include grid-layout(20, 10px);
     }
     h1, h2, h3, h4, h5, h6{
-        @include breakpoint-desktop-small{
-            @include grid-column-start(1);
-            @include grid-column-span(13);
+        @include grid-column-start(2);
+        @include grid-column-span(12);
+        @include breakpoint-tablet{
+            @include grid-column-start(3);
+            @include grid-column-span(11);
         }
     }
-
     p, ul, ol,
     blockquote,
     .embed-container,
@@ -75,8 +79,10 @@ p{
         line-height: rem(24px);
         max-width: 100%;
         margin: 0 rem(5px) rem(20px) 0;
-        @include breakpoint-desktop-small{
-            @include grid-column-start(1);
+        @include grid-column-start(2);
+        @include grid-column-span(11);
+        @include breakpoint-tablet{
+            @include grid-column-start(3);
             @include grid-column-span(9);
         }
         &:last-child{
@@ -131,9 +137,11 @@ p{
         position: relative;
         height: 350px;
         margin: 40px 0 60px 0;
-        @include breakpoint-desktop-small{
+        @include grid-column-start(2);
+        @include grid-column-span(11);
+        @include breakpoint-tablet{
             height: 558px;  
-            @include grid-column-start(4);
+            @include grid-column-start(6);
             @include grid-column-span(13);
         }
         >img{
@@ -172,8 +180,10 @@ p{
         border-left: .1rem solid currentColor;
     }
     .body-text-btn{
+        @include grid-column-start(2);
+        @include grid-column-span(5); 
         @include breakpoint-tablet{
-            @include grid-column-start(1);
+            @include grid-column-start(3);
             @include grid-column-span(3); 
         }
     }
