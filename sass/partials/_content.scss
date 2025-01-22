@@ -88,16 +88,16 @@
   }
 }
 
-// gallery
+// title-image 
 
-.gallery{
+.title-image {
   margin: 92px 0px;
   .wrapper{
     align-items: end;
     h2{
       font-size: 46px;
       margin-bottom: 40px;
-      @include grid-column-start(1);
+      @include grid-column-start(2);
       @include grid-column-span(11);
       @include breakpoint-desktop-small{
         font-size: 60px;
@@ -109,12 +109,12 @@
   }
 }
 
-.galley-image {
+.title-image-image {
   height: 440px;
   margin-left: 1px;
   margin-bottom: 40px;
-  @include grid-column-start(2);
-  @include grid-column-span(10);
+  @include grid-column-start(3);
+  @include grid-column-span(9);
   @include breakpoint-desktop-small{
     height: 732px;
     @include grid-column-start(7);
@@ -122,25 +122,48 @@
    
   }
 }
-.gallery-text-image{
+.title-image-text-image{
   position: relative;
   bottom: -40px;
-  margin-left: 5px;
-  @include grid-column-start(2);
-  @include grid-column-span(8);
+  @include grid-column-start(3);
+  @include grid-column-span(9);
   @include breakpoint-desktop-small{
     @include grid-column-start(16);
-    @include grid-column-span(5);
-    
+    @include grid-column-span(4);
   }
 }
-.gallery-text-image-image{
+.title-image-text-image-image{
   display: none;
   @include breakpoint-desktop-small{
     position: relative;
     display: block;
     margin-top: 60px;
     height: 193.93px;
+    .shape-top{
+      top: -1px;
+      position: absolute;
+      left: 25px;
+      z-index: 8;
+      width: 90px;
+      height: auto;
+      transform: scale(-1);
+      max-width: 414px;
+      @include breakpoint-desktop-small{
+        left: 1vw;
+      }
+    }
+    .shape-bottom{
+      bottom: -3px;
+      position: absolute;
+      right: 25px;
+      z-index: 8;
+      width: 90px;
+      height: auto;
+      max-width: 414px;
+      @include breakpoint-desktop-small{
+        right: 1vw;
+      }
+    }
   }
 
 }
@@ -157,7 +180,7 @@
     min-height: 820px;
   }
   .wrapper{
-    display: flex;
+    width: 100%;
     align-items: end;
     height: 100%;
     z-index: 4;
@@ -211,8 +234,11 @@
 }
 
 .overview-project-text{
+  @include grid-column-start(2);
+  @include grid-column-span(10);
   margin-bottom: 38px;
   @include breakpoint-desktop-small{
+    @include grid-column-start(3);
     margin-bottom: 76px;
   }
   .arrow-right{
@@ -226,23 +252,26 @@
       width: 47px;
     }
   }
-
+  h1{
+    font-size: 45px;
+    @include breakpoint-desktop-small{
+      font-size: 70px;
+    }
+  }
 }
 
 // text-image
 
 .text-image{
   margin-bottom: 130px;
-  .wrapper{
-  }
 }
 
 .text-image-text{
-  @include grid-column-start(1);
+  @include grid-column-start(2);
   @include grid-column-span(10);
   @include breakpoint-desktop-small{
-    @include grid-column-start(3);
-    @include grid-column-span(8);
+    @include grid-column-start(5);
+    @include grid-column-span(7);
   }
 
   h1{
@@ -257,14 +286,14 @@
 .text-image-image{
   position: relative;
   overflow: hidden;
-  @include grid-column-start(2);
-  @include grid-column-span(10);
+  @include grid-column-start(3);
+  @include grid-column-span(9);
   height: 208px;
   max-width: 310px;
   @include breakpoint-desktop-small{
-    @include grid-column-start(11);
+    @include grid-column-start(12);
     @include grid-column-span(6);
-    margin: 90px 0 0 33px;
+    margin: 90px 0 0 26px;
   }
   .shape-top{
     top: -1px;
@@ -304,19 +333,22 @@
   }
   .wrapper{
     h1{
+      font-size: 46px;
+      @include grid-column-start(2);
       @include breakpoint-desktop-small{
-        @include grid-column-start(8);
+        font-size: 70px;
+        @include grid-column-start(9);
         @include grid-column-span(6);
         font-size: 100px;
         margin-bottom: 25px;
       }
     }
     .btn-product{
-      @include grid-column-start(1);
-      @include grid-column-span(2);
+      @include grid-column-start(2);
+      @include grid-column-span(7);
       @include breakpoint-desktop-small{
         margin-top: -50px;
-        @include grid-column-start(14);
+        @include grid-column-start(15);
         @include grid-column-span(5);
       }
       .btn{
@@ -353,45 +385,36 @@
   }
 }
 
-.overview-products-items{
-  @include grid-column-start(1);
-  @include grid-column-span(2);
-  @include grid-layout(10, 10px, 60px);
-  @include breakpoint-tablet{
-    @include grid-layout(10, 10px, 60px);
-  }
-  @include breakpoint-desktop-small{
-    @include grid-column-span(18);
-    @include grid-layout(18, 10px);
-  }
-}
 
 .overview-produc-item{
   height: 482px;
   position: relative;
   overflow: hidden;
+  @include grid-column-start(2);
   @include grid-column-span(10);
   @include breakpoint-tablet{
-    @include grid-column-span(5);
+    @include grid-column-span(9);
+    &:nth-child(3n + 1) {
+        @include grid-column-start(2);
+    }
+    &:nth-child(3n + 2) {
+        @include grid-column-start(12);
+    }
   }
-  &:nth-child(3n + 1) {
-    @include breakpoint-desktop-small {
-      @include grid-column-start(2);
+  @include breakpoint-desktop-small{
+    @include grid-column-span(5);
+    &:nth-child(3n + 1) {
+      @include grid-column-start(3);
       margin-top: -70px;
     }
-  }
-  &:nth-child(3n + 2) {
-    @include breakpoint-desktop-small {
-      @include grid-column-start(8);
+    &:nth-child(3n + 2) {
+      @include grid-column-start(9);
       margin-top: 120px;
     }
-  }
-  &:nth-child(3n + 3) {
-    @include breakpoint-desktop-small {
-      @include grid-column-start(14);
+    &:nth-child(3n + 3) {
+      @include grid-column-start(15);
     }
   }
-
   .shape-top{
     top: -1px;
     position: absolute;
