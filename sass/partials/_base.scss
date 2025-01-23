@@ -58,7 +58,7 @@ body {
   margin: 0 auto;
   @include grid-layout(12, 10px, 50px);
   @include breakpoint-tablet{
-    @include grid-layout(20, 10px);
+    @include grid-layout(20, 10px, 50px);
   }
 }
 
