@@ -605,9 +605,10 @@
     position: absolute;
     left: 25px;
     z-index: 8;
-    width: 90px;
+    width: 170px;
     height: auto;
     transform: scale(-1);
+    max-width: 414px;
     @include breakpoint-desktop-small{
       left: 1vw;
     }
@@ -617,7 +618,7 @@
     position: absolute;
     right: 25px;
     z-index: 8;
-    width: 90px;
+    width: 170px;
     height: auto;
     max-width: 414px;
     @include breakpoint-desktop-small{
@@ -626,19 +627,50 @@
   }
 }
 
+// Projectdetails
+
 .projectdetails{
+  margin-bottom: 150px;
   .wrapper{
-    grid-template-rows: minmax(300px, 1fr);
+    grid-template-rows: minmax(448px, 1fr);
   }
 }
 
 .projectdetails-image-big{
+  overflow: hidden;
+  position: relative;
+  height: 730px;
   @include grid-column-start(1);
   @include grid-column-span(12);
   @include breakpoint-tablet{
     @include grid-column-start(2);
     @include grid-column-span(8);
     @include grid-row-span(2);
+  }
+  .shape-top{
+    top: -1px;
+    position: absolute;
+    left: 25px;
+    z-index: 8;
+    width: 170px;
+    height: auto;
+    transform: scale(-1);
+    max-width: 414px;
+    @include breakpoint-desktop-small{
+      left: 1vw;
+    }
+  }
+  .shape-bottom{
+    bottom: -3px;
+    position: absolute;
+    right: 25px;
+    z-index: 8;
+    width: 170px;
+    height: auto;
+    max-width: 414px;
+    @include breakpoint-desktop-small{
+      right: 1vw;
+    }
   }
 }
 
@@ -648,21 +680,88 @@
     @include grid-column-start(11);
   }
 }
+.start-13{
+  @include grid-column-start(1);
+  @include breakpoint-tablet{
+    @include grid-column-start(13);
+  }
+}
 .projectdetails-image-medium {
+  overflow: hidden;
+  position: relative;
+  height: 445px;
   @include grid-column-span(12);
-  height: 300px;
   @include breakpoint-tablet{
     @include grid-column-span(9);
+  }
+  .shape-top{
+    top: -1px;
+    position: absolute;
+    left: 25px;
+    z-index: 8;
+    width: 170px;
+    height: auto;
+    transform: scale(-1);
+    max-width: 414px;
+    @include breakpoint-desktop-small{
+      left: 1vw;
+    }
+  }
+  .shape-bottom{
+    bottom: -3px;
+    position: absolute;
+    right: 25px;
+    z-index: 8;
+    width: 170px;
+    height: auto;
+    max-width: 414px;
+    @include breakpoint-desktop-small{
+      right: 1vw;
+    }
   }
 }
 .projectdetails-text{
   @include grid-column-span(9);
 }
 .projectdetails-text-image {
-  height: 500px;
-  @include grid-column-span(9);
+  overflow: hidden;
+  position: relative;
+  @include grid-column-start(2);
+  @include grid-column-span(4);
+  @include grid-row-span(2);
+  align-self: end;
+  h2{
+    margin-bottom: 120px;
+  }
 }
 
 .projectdetails-text-image-image{
-  height: 300px;
+  overflow: hidden;
+  position: relative;
+  height: 250px;
+  .shape-top{
+    top: -1px;
+    position: absolute;
+    left: 25px;
+    z-index: 8;
+    width: 170px;
+    height: auto;
+    transform: scale(-1);
+    max-width: 414px;
+    @include breakpoint-desktop-small{
+      left: 1vw;
+    }
+  }
+  .shape-bottom{
+    bottom: -3px;
+    position: absolute;
+    right: 25px;
+    z-index: 8;
+    width: 170px;
+    height: auto;
+    max-width: 414px;
+    @include breakpoint-desktop-small{
+      right: 1vw;
+    }
+  }
 }
