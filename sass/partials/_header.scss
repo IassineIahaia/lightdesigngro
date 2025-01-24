@@ -1,21 +1,43 @@
-header{
+header {
     position: fixed;
-    top: 25px;
+    top: 0; 
     left: 0;
-    height: 60px;
+    height: 80px;
     z-index: 100;
     width: 100%;
-}
+    transition: all 0.3s ease-in-out;
+    &.fixed {
+      background-color: $color-lightcream;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+     
+      .menu-large{
+        transition: all 0.3s ease-in-out;
+        margin-top: 30px;
+        ul{
+            li{
+                a{
+                    color: $color-black;
+                }
+            }
+        }
+      }
+    }
+  }
+  
 
-.main-menu{
+.menu-large{
+    display: none;
     margin-top: 20px;
     @include breakpoint-tablet{
+        display: block;
         @include grid-column-start(10);
         @include grid-column-span(10);
         justify-self: end;
     }
     ul{
-        display: flex;
+        // display: none;
+        @include breakpoint-tablet{
+              display: flex;
         gap: 30px;
         align-items: center;
         li{
@@ -26,6 +48,8 @@ header{
                 font-size: rem(16px);
             }
         }
+        }
+      
     }
 }
 .logo{
