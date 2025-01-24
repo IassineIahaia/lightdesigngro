@@ -263,7 +263,54 @@
 // text-image
 
 .text-image{
-  margin-bottom: 130px;
+  margin-bottom: 150px;
+  padding: 130px 0;
+}
+.text-image-background{
+  position: relative;
+  background-color: $color-black;
+  .text-image-text{
+    h1{
+      color: $color-white;
+    }
+  }
+  .text-image-image{
+    .shape-top{
+      path{
+        fill: #000000;
+      }
+    }
+    .shape-bottom{
+      path{
+        fill: #000000;
+      }
+    }
+  }
+  .shape-top{
+    top: -1px;
+    position: absolute;
+    left: 10px;
+    z-index: 8;
+    width: 118px;
+    height: auto;
+    transform: scale(-1);
+    @include breakpoint-desktop-small{
+      width: 230px;
+      left: 130px;
+    }
+  }
+  .shape-bottom{
+    bottom: 0px;
+    position: absolute;
+    right: 10px;
+    z-index: 8;
+    width: 118px;
+    height: auto;
+    @include breakpoint-desktop-small{
+      width: 230px;
+      right: 130px;
+    }
+  }
 }
 
 .text-image-text{
@@ -804,17 +851,32 @@
   margin-bottom: 150px;
 }
 .contact-content{
-  @include grid-column-start(3);
-  @include grid-column-span(9);
+  @include grid-column-start(2);
+  @include grid-column-span(10);
+  @include breakpoint-tablet{
+    @include grid-column-start(3);
+    @include grid-column-span(9);
+  }
 }
 .contact-sidebar{
   margin-top: 30px;
-  @include grid-column-start(15);
-  @include grid-column-span(4);
+  @include grid-column-start(2);
+  @include grid-column-span(10);
+  @include breakpoint-tablet{
+    @include grid-column-start(15);
+    @include grid-column-span(4);
+  }
   h3{
     margin-bottom: 30px;
-    @include breakpoint-desktop-small{
+    @include breakpoint-tablet{
       font-size: 32px;
     }
+  }
+  h5{
+    font-size: 15px;
+  }
+  a{
+    text-decoration: none;
+    color: $color-black;
   }
 }

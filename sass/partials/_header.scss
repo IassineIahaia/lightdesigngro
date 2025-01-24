@@ -5,22 +5,46 @@ header{
     height: 60px;
     z-index: 100;
     width: 100%;
+    .fixed & {
+        background-color: red;
+    }
 }
-
+.main-menu{
+    margin-top: 20px;
+    @include breakpoint-tablet{
+        @include grid-column-start(14);
+        @include grid-column-span(8);
+    }
+    ul{
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        li{
+            list-style: none;
+            a{
+                text-decoration: none;
+                color: $color-white;
+                font-size: rem(16px);
+            }
+        }
+    }
+}
 .logo{
+
     position: relative;
     display: inline-block;
     height: 55px;
     width: 60px;
     left: 65px;
-
+    
     &::before{
         content: "";
         position: absolute;
-        top: -110px;
+        top: -150px;
         left: -62px;
-        width: 279px;
-        height: 156px;
+        width: 400px;
+        height: 180px;
+        z-index: -1;
         background-color: #fbf8ee;
         transform: rotate(-31deg);
     }
