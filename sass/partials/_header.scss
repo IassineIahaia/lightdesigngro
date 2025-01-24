@@ -31,13 +31,12 @@ header {
     @include breakpoint-tablet{
         display: block;
         @include grid-column-start(10);
-        @include grid-column-span(10);
+        @include grid-column-span(11);
         justify-self: end;
     }
     ul{
-        // display: none;
         @include breakpoint-tablet{
-              display: flex;
+        display: flex;
         gap: 30px;
         align-items: center;
         li{
@@ -53,22 +52,37 @@ header {
     }
 }
 .logo{
-
     position: relative;
-    display: inline-block;
     height: 55px;
     width: 60px;
-    left: 65px;
-    
-    &::before{
-        content: "";
-        position: absolute;
-        top: -150px;
-        left: -62px;
-        width: 400px;
-        height: 180px;
-        z-index: -1;
-        background-color: #fbf8ee;
-        transform: rotate(-31deg);
+    @include breakpoint-tablet{
+        left: 65px;
     }
+    >img{
+        position: absolute;
+        top: 26%;
+        left: 130%;
+        width: 78px;
+        height: auto;
+        object-fit: cover;
+        align-self: center;
+        @include breakpoint-tablet{
+            top: 50%;
+            left: 128%;
+        }
+    }
+    .shape-top{
+        top: -1px;
+        position: absolute;
+        left: 10px;
+        z-index: 8;
+        width: 315px;
+        height: auto;
+        transform: scale(-1);
+        z-index: -1;
+        @include breakpoint-tablet{
+          width: 415px;
+          left: -40px;
+        }
+      }
 }
