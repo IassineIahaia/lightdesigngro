@@ -2,7 +2,7 @@
   overflow: hidden;
   position: relative;
   height: 589px;
-  margin: 10px 10px 0 10px;
+  margin: 10px 10px 150px 10px;
   @include breakpoint-desktop-small{
     height: calc(100vh - 20px);
   }
@@ -647,6 +647,17 @@
     @include grid-column-span(8);
     @include grid-row-span(2);
   }
+  .zoom-icon{
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    z-index: 10;
+    bottom: 5px;
+    right: 60px;
+    @include breakpoint-desktop-small{
+      right: 3vw;
+    }
+  }
   .shape-top{
     top: -1px;
     position: absolute;
@@ -656,6 +667,7 @@
     height: auto;
     transform: scale(-1);
     max-width: 414px;
+    right: 25px;
     @include breakpoint-desktop-small{
       left: 1vw;
     }
@@ -693,6 +705,17 @@
   @include grid-column-span(12);
   @include breakpoint-tablet{
     @include grid-column-span(9);
+  }
+  .zoom-icon{
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    z-index: 10;
+    bottom: 5px;
+    right: 60px;
+    @include breakpoint-desktop-small{
+      right: 3vw;
+    }
   }
   .shape-top{
     top: -1px;
@@ -739,6 +762,17 @@
   overflow: hidden;
   position: relative;
   height: 250px;
+  .zoom-icon{
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    z-index: 10;
+    bottom: 5px;
+    right: 60px;
+    @include breakpoint-desktop-small{
+      right: 3vw;
+    }
+  }
   .shape-top{
     top: -1px;
     position: absolute;
