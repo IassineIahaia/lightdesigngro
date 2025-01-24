@@ -5,15 +5,14 @@ header{
     height: 60px;
     z-index: 100;
     width: 100%;
-    .fixed & {
-        background-color: red;
-    }
 }
+
 .main-menu{
     margin-top: 20px;
     @include breakpoint-tablet{
-        @include grid-column-start(14);
-        @include grid-column-span(8);
+        @include grid-column-start(10);
+        @include grid-column-span(10);
+        justify-self: end;
     }
     ul{
         display: flex;
